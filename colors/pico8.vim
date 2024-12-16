@@ -29,7 +29,7 @@ let s:pink        = '#FF77A8'
 let s:peach       = '#FFCCAA'
 
 let s:background = '#1D2B53'
-let s:shade = '#3F372F'
+let s:shade = '#83769C'
 
 function! s:HL(group, fg, bg, attr)
   if !empty(a:fg)
@@ -45,13 +45,13 @@ endfunction
 
 " group foreground background style
 
-call s:HL('Cursor', s:dark_gray, s:red, '')
+call s:HL('Cursor', s:red, s:red, '')
 call s:HL('Visual', s:dark_gray, s:yellow, '')
 
-call s:HL('LineNr', s:dark_gray, s:shade, 'none')
-call s:HL('CursorLineNr', s:peach, s:red, 'bold')
+call s:HL('LineNr', s:peach, s:background, 'none')
+call s:HL('CursorLineNr', s:white, s:red, 'bold')
 call s:HL('SignColumn', s:dark_gray, s:shade, '')
-call s:HL('NonText', s:dark_gray, '', '')
+call s:HL('NonText', s:background, '', '')
 
 call s:HL('CursorLine', '', s:shade, '')
 call s:HL('CursorColumn', '', s:shade, '')
